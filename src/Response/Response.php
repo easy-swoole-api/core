@@ -64,7 +64,7 @@ class Response
         if (class_exists($class)) {
             $response = new $class($esResponse, $data, $code, $header, $options);
         } else {
-            $response = new static($esResponse, $code, $header, $options);
+            $response = new static($esResponse, $data, $code, $header, $options);
         }
 
         return $response;
